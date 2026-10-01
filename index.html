@@ -1,0 +1,5155 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+
+<meta charset="utf-8">
+
+<meta name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover">
+
+<title>MỘC TRÀ – Shan Tuyết Cổ Thụ Mộc Châu</title>
+
+<meta name="description"
+      content="Trà Shan Tuyết cổ thụ Mộc Châu – đậm vị, thơm hậu tự nhiên. Ưu đãi hôm nay, giao hàng tận nơi, nhận hàng kiểm tra rồi thanh toán.">
+
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+  --green:#164a32;
+  --green-2:#216642;
+  --green-3:#2d7b50;
+
+  --dark:#102b1e;
+
+  --gold:#d8a84e;
+  --gold-2:#f0c96d;
+  --gold-light:#fff4d7;
+
+  --cream:#fbf7ed;
+  --cream-2:#f5efe1;
+
+  --red:#d9362b;
+  --red-dark:#b92820;
+
+  --orange:#ef9b2d;
+
+  --text:#18231c;
+  --muted:#6d766f;
+
+  --white:#fff;
+
+  --line:#e8e0d0;
+
+  --shadow:
+    0 12px 35px rgba(22,74,50,.10);
+
+  --radius:18px;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+
+  background:
+    linear-gradient(
+      180deg,
+      #edf2ed 0%,
+      #f7f7f5 100%
+    );
+
+  color:var(--text);
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+}
+
+button,
+input,
+textarea{
+  font-family:inherit;
+}
+
+button{
+  -webkit-tap-highlight-color:transparent;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.page{
+  max-width:560px;
+
+  margin:auto;
+
+  background:#fff;
+
+  min-height:100vh;
+
+  overflow:hidden;
+
+  box-shadow:
+    0 0 40px rgba(0,0,0,.08);
+}
+
+
+/* =========================================================
+   TOP ANNOUNCEMENT
+========================================================= */
+
+.top-sale{
+  position:relative;
+
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      #a92018,
+      #d9362b,
+      #b51f18
+    );
+
+  color:#fff;
+
+  text-align:center;
+
+  padding:8px 12px;
+
+  font-size:12px;
+
+  font-weight:800;
+
+  letter-spacing:.2px;
+}
+
+.top-sale::after{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:-100%;
+
+  width:60%;
+  height:100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.35),
+      transparent
+    );
+
+  animation:
+    saleShine 3s infinite;
+}
+
+@keyframes saleShine{
+
+  0%{
+    left:-100%;
+  }
+
+  45%,
+  100%{
+    left:140%;
+  }
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header{
+  position:sticky;
+
+  top:0;
+
+  z-index:50;
+
+  height:58px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  padding:0 15px;
+
+  background:
+    rgba(255,255,255,.96);
+
+  backdrop-filter:blur(12px);
+
+  border-bottom:
+    1px solid rgba(0,0,0,.07);
+}
+
+.logo-wrap{
+  display:flex;
+
+  align-items:center;
+
+  gap:8px;
+}
+
+.logo-icon{
+  width:30px;
+  height:30px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--green),
+      var(--green-3)
+    );
+
+  color:#fff;
+
+  font-size:15px;
+}
+
+.logo{
+  color:var(--green);
+
+  font-size:17px;
+
+  font-weight:950;
+
+  letter-spacing:1.5px;
+}
+
+.header-order{
+  display:flex;
+
+  align-items:center;
+
+  gap:5px;
+
+  padding:9px 12px;
+
+  border-radius:999px;
+
+  background:var(--gold-light);
+
+  color:#7d5b1e;
+
+  text-decoration:none;
+
+  font-size:11px;
+
+  font-weight:900;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  position:relative;
+
+  padding:14px 14px 25px;
+
+  color:#fff;
+
+  background:
+    radial-gradient(
+      circle at 90% 5%,
+      rgba(240,201,109,.24),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 0% 100%,
+      rgba(45,123,80,.55),
+      transparent 32%
+    ),
+    linear-gradient(
+      145deg,
+      #0e3926,
+      #164a32 58%,
+      #103b28
+    );
+}
+
+
+/* =========================================================
+   HERO BADGE
+========================================================= */
+
+.hero-badge{
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:6px;
+
+  margin:2px 0 12px;
+
+  padding:7px 11px;
+
+  border:
+    1px solid
+    rgba(240,201,109,.45);
+
+  border-radius:999px;
+
+  background:
+    rgba(255,255,255,.08);
+
+  color:#f8d77e;
+
+  font-size:11px;
+
+  font-weight:900;
+
+  letter-spacing:.5px;
+}
+
+.live-dot{
+  width:7px;
+  height:7px;
+
+  border-radius:50%;
+
+  background:#ff5b50;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(255,91,80,.12);
+
+  animation:
+    livePulse 1.5s infinite;
+}
+
+@keyframes livePulse{
+
+  0%,
+  100%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(1.35);
+  }
+
+}
+
+
+/* =========================================================
+   MEDIA
+========================================================= */
+
+.media-slider{
+  width:100%;
+
+  display:flex;
+
+  overflow-x:auto;
+
+  scroll-snap-type:x mandatory;
+
+  scrollbar-width:none;
+
+  border-radius:20px;
+
+  -webkit-overflow-scrolling:touch;
+
+  overscroll-behavior-x:contain;
+
+  touch-action:pan-x;
+
+  box-shadow:
+    0 15px 35px
+    rgba(0,0,0,.24);
+}
+
+.media-slider::-webkit-scrollbar{
+  display:none;
+}
+
+.media-slide{
+  position:relative;
+
+  flex:0 0 100%;
+
+  width:100%;
+
+  height:315px;
+
+  scroll-snap-align:start;
+
+  overflow:hidden;
+
+  background:#111;
+}
+
+.media-slide > img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+}
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.video-slide{
+  background:#000;
+}
+
+.video-thumbnail{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+}
+
+.video-slide video{
+  position:absolute;
+
+  inset:0;
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  display:none;
+
+  background:#000;
+}
+
+.video-slide.playing
+.video-thumbnail{
+  display:none;
+}
+
+.video-slide.playing video{
+  display:block;
+}
+
+
+/* =========================================================
+   PLAY
+========================================================= */
+
+.play-btn{
+  position:absolute;
+
+  left:50%;
+  top:50%;
+
+  transform:
+    translate(-50%,-50%);
+
+  width:76px;
+  height:76px;
+
+  border:
+    3px solid
+    rgba(255,255,255,.8);
+
+  border-radius:50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--gold),
+      #b97824
+    );
+
+  color:#fff;
+
+  font-size:28px;
+
+  padding-left:5px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  z-index:10;
+
+  cursor:pointer;
+
+  box-shadow:
+    0 8px 35px
+    rgba(0,0,0,.35);
+
+  animation:
+    playPulse 2s infinite;
+}
+
+@keyframes playPulse{
+
+  0%,
+  100%{
+    box-shadow:
+      0 8px 35px
+      rgba(0,0,0,.35),
+      0 0 0 0
+      rgba(216,168,78,.45);
+  }
+
+  50%{
+    box-shadow:
+      0 8px 35px
+      rgba(0,0,0,.35),
+      0 0 0 13px
+      rgba(216,168,78,0);
+  }
+
+}
+
+.video-slide.playing
+.play-btn{
+  display:none;
+}
+
+
+/* =========================================================
+   VIDEO ERROR
+========================================================= */
+
+.video-error{
+  position:absolute;
+
+  left:12px;
+  right:12px;
+  bottom:12px;
+
+  display:none;
+
+  padding:9px 11px;
+
+  border-radius:10px;
+
+  background:
+    rgba(0,0,0,.8);
+
+  color:#fff;
+
+  font-size:11px;
+
+  text-align:center;
+
+  z-index:20;
+}
+
+
+/* =========================================================
+   DOTS
+========================================================= */
+
+.media-dots{
+  display:flex;
+
+  justify-content:center;
+
+  gap:6px;
+
+  margin:10px 0 16px;
+}
+
+.media-dots span{
+  width:7px;
+  height:7px;
+
+  border-radius:10px;
+
+  background:
+    rgba(255,255,255,.4);
+
+  transition:.25s;
+
+  cursor:pointer;
+}
+
+.media-dots span.active{
+  width:22px;
+
+  background:var(--gold-2);
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.eyebrow{
+  margin-bottom:7px;
+
+  color:#f0c96d;
+
+  font-size:11px;
+
+  font-weight:900;
+
+  letter-spacing:1.1px;
+
+  text-transform:uppercase;
+}
+
+.hero h1{
+  margin:0 0 11px;
+
+  font-size:30px;
+
+  line-height:1.12;
+
+  letter-spacing:-.7px;
+}
+
+.hero-description{
+  margin:0;
+
+  color:#dce9df;
+
+  font-size:14px;
+
+  line-height:1.6;
+}
+
+.rating{
+  display:flex;
+
+  align-items:center;
+
+  flex-wrap:wrap;
+
+  gap:7px;
+
+  margin-top:14px;
+
+  font-size:12px;
+}
+
+.stars{
+  color:#ffd467;
+
+  letter-spacing:1px;
+}
+
+.rating b{
+  color:#fff;
+}
+
+
+/* =========================================================
+   FLASH SALE BOX
+========================================================= */
+
+.flash-box{
+  margin-top:17px;
+
+  padding:13px;
+
+  border:
+    1px solid
+    rgba(240,201,109,.35);
+
+  border-radius:15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.10),
+      rgba(255,255,255,.04)
+    );
+
+  box-shadow:
+    inset 0 1px 0
+    rgba(255,255,255,.08);
+}
+
+.flash-top{
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:10px;
+}
+
+.flash-title{
+  color:#ffd56f;
+
+  font-size:12px;
+
+  font-weight:950;
+
+  text-transform:uppercase;
+}
+
+.countdown{
+  display:flex;
+
+  align-items:center;
+
+  gap:4px;
+}
+
+.time-box{
+  min-width:31px;
+
+  padding:5px 4px;
+
+  border-radius:6px;
+
+  background:#fff;
+
+  color:#9c241c;
+
+  text-align:center;
+
+  font-size:12px;
+
+  font-weight:950;
+}
+
+.time-sep{
+  color:#fff;
+
+  font-weight:900;
+}
+
+.flash-bottom{
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  margin-top:9px;
+
+  gap:10px;
+}
+
+.flash-bottom span{
+  color:#dce9df;
+
+  font-size:11px;
+}
+
+.progress{
+  flex:1;
+
+  height:6px;
+
+  border-radius:999px;
+
+  background:
+    rgba(255,255,255,.18);
+
+  overflow:hidden;
+}
+
+.progress span{
+  display:block;
+
+  width:82%;
+
+  height:100%;
+
+  border-radius:999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ef9b2d,
+      #ffd56f
+    );
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.section{
+  padding:31px 16px;
+}
+
+.section.cream{
+  background:var(--cream);
+}
+
+.section h2{
+  margin:0 0 7px;
+
+  color:var(--dark);
+
+  font-size:23px;
+
+  line-height:1.2;
+}
+
+.sub{
+  margin:0 0 18px;
+
+  color:var(--muted);
+
+  font-size:13px;
+
+  line-height:1.55;
+}
+
+
+/* =========================================================
+   TRUST STRIP
+========================================================= */
+
+.trust-strip{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  border-top:
+    1px solid var(--line);
+
+  border-bottom:
+    1px solid var(--line);
+
+  background:#fff;
+}
+
+.trust-item{
+  padding:15px 7px;
+
+  text-align:center;
+
+  border-right:
+    1px solid var(--line);
+}
+
+.trust-item:last-child{
+  border-right:0;
+}
+
+.trust-icon{
+  font-size:21px;
+
+  margin-bottom:4px;
+}
+
+.trust-item b{
+  display:block;
+
+  color:var(--green);
+
+  font-size:11px;
+}
+
+.trust-item span{
+  display:block;
+
+  margin-top:2px;
+
+  color:var(--muted);
+
+  font-size:9px;
+}
+
+
+/* =========================================================
+   PRODUCT OPTIONS
+========================================================= */
+
+.options{
+  display:grid;
+
+  gap:10px;
+}
+
+.option{
+  position:relative;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:10px;
+
+  padding:15px;
+
+  border:
+    1.5px solid
+    var(--line);
+
+  border-radius:16px;
+
+  background:#fff;
+
+  cursor:pointer;
+
+  transition:
+    transform .15s,
+    border-color .15s,
+    box-shadow .15s;
+}
+
+.option:active{
+  transform:scale(.985);
+}
+
+.option.active{
+  border-color:var(--green);
+
+  background:
+    linear-gradient(
+      135deg,
+      #f4faf5,
+      #fff
+    );
+
+  box-shadow:
+    0 8px 25px
+    rgba(22,74,50,.10);
+}
+
+.option.recommended{
+  padding-top:20px;
+}
+
+.recommend-badge{
+  position:absolute;
+
+  left:12px;
+  top:-10px;
+
+  padding:5px 9px;
+
+  border-radius:999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--gold),
+      #b87927
+    );
+
+  color:#fff;
+
+  font-size:9px;
+
+  font-weight:950;
+
+  box-shadow:
+    0 4px 10px
+    rgba(184,121,39,.25);
+}
+
+.option-left strong{
+  display:block;
+
+  color:var(--dark);
+
+  font-size:16px;
+}
+
+.option-left small{
+  display:block;
+
+  margin-top:3px;
+
+  color:var(--muted);
+
+  font-size:11px;
+}
+
+.option-right{
+  display:flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  text-align:right;
+}
+
+.price{
+  color:var(--green);
+
+  font-size:16px;
+
+  font-weight:950;
+
+  white-space:nowrap;
+}
+
+.old-price{
+  display:block;
+
+  margin-bottom:2px;
+
+  color:#9b9b9b;
+
+  font-size:10px;
+
+  text-decoration:line-through;
+}
+
+.check{
+  width:23px;
+  height:23px;
+
+  border:
+    2px solid
+    #d5d5d5;
+
+  border-radius:50%;
+
+  flex:none;
+}
+
+.active .check{
+  border:
+    7px solid
+    var(--green);
+}
+
+
+/* =========================================================
+   SAVING BANNER
+========================================================= */
+
+.saving-banner{
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  margin-top:13px;
+
+  padding:12px;
+
+  border-radius:13px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #fff4d7,
+      #fffaf0
+    );
+
+  border:
+    1px solid
+    #f1dfad;
+}
+
+.saving-banner-icon{
+  font-size:22px;
+}
+
+.saving-banner b{
+  display:block;
+
+  color:#815e1e;
+
+  font-size:12px;
+}
+
+.saving-banner span{
+  color:#8b7a59;
+
+  font-size:10px;
+}
+
+
+/* =========================================================
+   PRODUCT INTRO
+========================================================= */
+
+.product-intro{
+  display:grid;
+
+  gap:18px;
+}
+
+.product-image{
+  position:relative;
+
+  height:255px;
+
+  overflow:hidden;
+
+  border-radius:18px;
+
+  box-shadow:var(--shadow);
+}
+
+.product-image img{
+  width:100%;
+  height:100%;
+
+  display:block;
+
+  object-fit:cover;
+}
+
+.image-label{
+  position:absolute;
+
+  left:12px;
+  bottom:12px;
+
+  padding:7px 10px;
+
+  border-radius:999px;
+
+  background:
+    rgba(16,43,30,.86);
+
+  color:#fff;
+
+  font-size:10px;
+
+  font-weight:800;
+}
+
+.product-text h3{
+  margin:0 0 9px;
+
+  color:var(--green);
+
+  font-size:20px;
+}
+
+.product-text p{
+  margin:0 0 11px;
+
+  color:#59635b;
+
+  font-size:13px;
+
+  line-height:1.7;
+}
+
+.product-text strong{
+  color:var(--green);
+}
+
+
+/* =========================================================
+   FEATURE GRID
+========================================================= */
+
+.feature-grid{
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:10px;
+
+  margin-top:16px;
+}
+
+.feature{
+  padding:15px;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:15px;
+
+  background:#fff;
+}
+
+.feature-icon{
+  font-size:23px;
+
+  margin-bottom:7px;
+}
+
+.feature b{
+  display:block;
+
+  margin-bottom:4px;
+
+  color:var(--dark);
+
+  font-size:13px;
+}
+
+.feature span{
+  color:var(--muted);
+
+  font-size:11px;
+
+  line-height:1.5;
+}
+
+
+/* =========================================================
+   INFO IMAGE ROW
+========================================================= */
+
+.info-image{
+  width:100%;
+
+  height:250px;
+
+  margin-top:18px;
+
+  overflow:hidden;
+
+  border-radius:18px;
+
+  box-shadow:var(--shadow);
+}
+
+.info-image img{
+  width:100%;
+  height:100%;
+
+  display:block;
+
+  object-fit:cover;
+}
+
+
+/* =========================================================
+   STORY
+========================================================= */
+
+.story{
+  margin-top:20px;
+
+  padding:19px;
+
+  border-radius:17px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f8f3e7,
+      #fff
+    );
+
+  border:
+    1px solid
+    #eee4d1;
+}
+
+.story h3{
+  margin:0 0 9px;
+
+  color:var(--green);
+
+  font-size:18px;
+}
+
+.story p{
+  margin:0 0 10px;
+
+  color:#5d665f;
+
+  font-size:13px;
+
+  line-height:1.7;
+}
+
+.story p:last-child{
+  margin-bottom:0;
+}
+
+
+/* =========================================================
+   TEA DETAILS
+========================================================= */
+
+.details{
+  display:grid;
+
+  gap:0;
+
+  margin-top:18px;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:15px;
+
+  overflow:hidden;
+}
+
+.detail-row{
+  display:flex;
+
+  justify-content:space-between;
+
+  gap:15px;
+
+  padding:13px 14px;
+
+  border-bottom:
+    1px solid
+    var(--line);
+
+  font-size:12px;
+}
+
+.detail-row:last-child{
+  border-bottom:0;
+}
+
+.detail-row span{
+  color:var(--muted);
+}
+
+.detail-row b{
+  color:var(--dark);
+
+  text-align:right;
+}
+
+
+/* =========================================================
+   HOW TO BREW
+========================================================= */
+
+.brew{
+  display:grid;
+
+  gap:10px;
+
+  margin-top:16px;
+}
+
+.brew-step{
+  display:flex;
+
+  gap:12px;
+
+  align-items:flex-start;
+
+  padding:13px;
+
+  border-radius:14px;
+
+  background:#fff;
+
+  border:
+    1px solid
+    var(--line);
+}
+
+.brew-number{
+  flex:none;
+
+  width:28px;
+  height:28px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:var(--green);
+
+  color:#fff;
+
+  font-size:12px;
+
+  font-weight:900;
+}
+
+.brew-step b{
+  display:block;
+
+  margin-bottom:3px;
+
+  font-size:12px;
+}
+
+.brew-step span{
+  color:var(--muted);
+
+  font-size:11px;
+
+  line-height:1.45;
+}
+
+
+/* =========================================================
+   PACKING SECTION
+========================================================= */
+
+.packing{
+  position:relative;
+
+  overflow:hidden;
+
+  border-radius:20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #123d29,
+      #1d6540
+    );
+
+  color:#fff;
+}
+
+.packing-image{
+  height:245px;
+}
+
+.packing-image img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+}
+
+.packing-content{
+  padding:19px;
+}
+
+.packing-content h3{
+  margin:0 0 8px;
+
+  font-size:20px;
+}
+
+.packing-content p{
+  margin:0;
+
+  color:#d9e7dc;
+
+  font-size:12px;
+
+  line-height:1.6;
+}
+
+
+/* =========================================================
+   REVIEWS
+========================================================= */
+
+.review-summary{
+  display:flex;
+
+  align-items:center;
+
+  gap:15px;
+
+  margin-bottom:15px;
+
+  padding:16px;
+
+  border-radius:16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff8e8,
+      #fff
+    );
+
+  border:
+    1px solid
+    #f0e1bd;
+}
+
+.review-score{
+  font-size:35px;
+
+  line-height:1;
+
+  font-weight:950;
+
+  color:var(--green);
+}
+
+.review-summary-info{
+  flex:1;
+}
+
+.review-summary-info .stars{
+  font-size:15px;
+}
+
+.review-summary-info b{
+  display:block;
+
+  margin-top:3px;
+
+  color:var(--dark);
+
+  font-size:12px;
+}
+
+.review-summary-info span{
+  display:block;
+
+  color:var(--muted);
+
+  font-size:10px;
+}
+
+.reviews{
+  display:grid;
+
+  gap:10px;
+}
+
+.review{
+  padding:16px;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:16px;
+
+  background:#fff;
+}
+
+.review-top{
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:10px;
+}
+
+.reviewer{
+  display:flex;
+
+  align-items:center;
+
+  gap:9px;
+}
+
+.avatar{
+  width:35px;
+  height:35px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #dcefe2,
+      #f6ead0
+    );
+
+  color:var(--green);
+
+  font-size:12px;
+
+  font-weight:900;
+}
+
+.reviewer-name{
+  font-size:12px;
+
+  font-weight:900;
+}
+
+.verified{
+  display:block;
+
+  color:#5c866b;
+
+  font-size:9px;
+
+  font-weight:700;
+}
+
+.review-stars{
+  color:#d29a32;
+
+  font-size:12px;
+
+  letter-spacing:1px;
+}
+
+.review p{
+  margin:11px 0 0;
+
+  color:#59635c;
+
+  font-size:12px;
+
+  line-height:1.6;
+}
+
+.review-photo{
+  width:100%;
+
+  height:145px;
+
+  margin-top:11px;
+
+  overflow:hidden;
+
+  border-radius:11px;
+}
+
+.review-photo img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+}
+
+
+/* =========================================================
+   SOCIAL PROOF
+========================================================= */
+
+.order-proof{
+  margin-top:15px;
+
+  padding:13px;
+
+  border-radius:14px;
+
+  background:#f4faf5;
+
+  border:
+    1px solid
+    #dcecdf;
+}
+
+.order-proof-row{
+  display:flex;
+
+  align-items:center;
+
+  gap:9px;
+}
+
+.mini-avatars{
+  display:flex;
+}
+
+.mini-avatar{
+  width:27px;
+  height:27px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  margin-left:-5px;
+
+  border:
+    2px solid
+    #f4faf5;
+
+  border-radius:50%;
+
+  background:#dbeadd;
+
+  color:var(--green);
+
+  font-size:8px;
+
+  font-weight:900;
+}
+
+.mini-avatar:first-child{
+  margin-left:0;
+}
+
+.order-proof b{
+  color:var(--green);
+
+  font-size:11px;
+}
+
+.order-proof span{
+  display:block;
+
+  margin-top:2px;
+
+  color:var(--muted);
+
+  font-size:9px;
+}
+
+
+/* =========================================================
+   DELIVERY
+========================================================= */
+
+.delivery-box{
+  display:grid;
+
+  gap:10px;
+}
+
+.delivery-item{
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  padding:14px;
+
+  border-radius:15px;
+
+  background:#fff;
+
+  border:
+    1px solid
+    var(--line);
+}
+
+.delivery-icon{
+  flex:none;
+
+  width:40px;
+  height:40px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  border-radius:12px;
+
+  background:#edf6ef;
+
+  font-size:21px;
+}
+
+.delivery-item b{
+  display:block;
+
+  font-size:12px;
+}
+
+.delivery-item span{
+  display:block;
+
+  margin-top:3px;
+
+  color:var(--muted);
+
+  font-size:10px;
+
+  line-height:1.4;
+}
+
+
+/* =========================================================
+   ORDER FORM
+========================================================= */
+
+.form-section{
+  position:relative;
+
+  padding-bottom:35px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f7f3e8,
+      #fff
+    );
+
+  border-top:
+    1px solid
+    var(--line);
+}
+
+.form-heading{
+  text-align:center;
+
+  margin-bottom:20px;
+}
+
+.form-heading .form-badge{
+  display:inline-block;
+
+  margin-bottom:8px;
+
+  padding:6px 10px;
+
+  border-radius:999px;
+
+  background:#ffe7e4;
+
+  color:#c62f26;
+
+  font-size:10px;
+
+  font-weight:950;
+}
+
+.form-heading h2{
+  font-size:26px;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.form-group{
+  margin-bottom:14px;
+}
+
+.form-group label{
+  display:block;
+
+  margin-bottom:7px;
+
+  color:var(--dark);
+
+  font-size:12px;
+
+  font-weight:900;
+}
+
+input,
+textarea{
+  width:100%;
+
+  border:
+    1.5px solid
+    #ded9cd;
+
+  border-radius:13px;
+
+  background:#fff;
+
+  padding:14px;
+
+  color:var(--text);
+
+  font-size:14px;
+
+  outline:none;
+
+  transition:.2s;
+}
+
+input:focus,
+textarea:focus{
+  border-color:var(--green);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(22,74,50,.08);
+}
+
+textarea{
+  min-height:82px;
+
+  resize:vertical;
+}
+
+
+/* =========================================================
+   ORDER SUMMARY
+========================================================= */
+
+.summary{
+  margin:17px 0;
+
+  padding:16px;
+
+  border:
+    1px solid
+    var(--line);
+
+  border-radius:16px;
+
+  background:#fff;
+
+  box-shadow:
+    0 8px 25px
+    rgba(0,0,0,.04);
+}
+
+.summary-title{
+  margin-bottom:9px;
+
+  color:var(--dark);
+
+  font-size:13px;
+
+  font-weight:950;
+}
+
+.summary-row{
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:12px;
+
+  padding:6px 0;
+
+  font-size:12px;
+}
+
+.summary-row span{
+  color:var(--muted);
+}
+
+.summary-row b{
+  color:var(--dark);
+
+  text-align:right;
+}
+
+.summary-row.total{
+  margin-top:7px;
+
+  padding-top:12px;
+
+  border-top:
+    1px dashed
+    var(--line);
+}
+
+.summary-row.total span:last-child{
+  color:var(--red);
+
+  font-size:20px;
+
+  font-weight:950;
+}
+
+
+/* =========================================================
+   QUANTITY
+========================================================= */
+
+.qty-control{
+  display:flex;
+
+  align-items:center;
+
+  gap:5px;
+}
+
+.qty-btn{
+  width:30px;
+  height:30px;
+
+  border:
+    1px solid
+    #d9d9d9;
+
+  border-radius:8px;
+
+  background:#fff;
+
+  color:var(--green);
+
+  font-size:18px;
+
+  cursor:pointer;
+}
+
+.qty-number{
+  width:30px;
+
+  text-align:center;
+
+  font-weight:900;
+}
+
+
+/* =========================================================
+   BIG CTA
+========================================================= */
+
+.main-cta{
+  position:relative;
+
+  width:100%;
+
+  overflow:hidden;
+
+  border:0;
+
+  border-radius:15px;
+
+  padding:17px 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e1a63f,
+      #bd7623
+    );
+
+  color:#fff;
+
+  font-size:16px;
+
+  font-weight:950;
+
+  letter-spacing:.2px;
+
+  cursor:pointer;
+
+  box-shadow:
+    0 10px 25px
+    rgba(190,119,33,.28);
+
+  animation:
+    ctaPulse 2.2s infinite;
+}
+
+.main-cta::after{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:-80%;
+
+  width:50%;
+  height:100%;
+
+  transform:
+    skewX(-20deg);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.45),
+      transparent
+    );
+
+  animation:
+    ctaShine 2.8s infinite;
+}
+
+@keyframes ctaShine{
+
+  0%{
+    left:-80%;
+  }
+
+  45%,
+  100%{
+    left:140%;
+  }
+
+}
+
+@keyframes ctaPulse{
+
+  0%,
+  100%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(1.012);
+  }
+
+}
+
+.main-cta:active{
+  transform:scale(.98);
+}
+
+.main-cta:disabled{
+  opacity:.65;
+
+  animation:none;
+}
+
+.cta-sub{
+  margin-top:8px;
+
+  text-align:center;
+
+  color:var(--muted);
+
+  font-size:10px;
+
+  line-height:1.5;
+}
+
+
+/* =========================================================
+   GUARANTEE
+========================================================= */
+
+.guarantee{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:7px;
+
+  margin-top:15px;
+}
+
+.guarantee-item{
+  padding:10px 5px;
+
+  border-radius:11px;
+
+  background:#f7f7f3;
+
+  text-align:center;
+}
+
+.guarantee-item b{
+  display:block;
+
+  color:var(--green);
+
+  font-size:10px;
+}
+
+.guarantee-item span{
+  display:block;
+
+  margin-top:3px;
+
+  color:var(--muted);
+
+  font-size:8px;
+}
+
+
+/* =========================================================
+   SUCCESS
+========================================================= */
+
+.success{
+  display:none;
+
+  min-height:70vh;
+
+  padding:
+    65px 20px 110px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f4faf5,
+      #fff
+    );
+
+  text-align:center;
+}
+
+.success-icon{
+  width:76px;
+  height:76px;
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  margin:0 auto 17px;
+
+  border-radius:50%;
+
+  background:
+    #e2f2e6;
+
+  color:var(--green);
+
+  font-size:45px;
+
+  font-weight:950;
+
+  box-shadow:
+    0 10px 30px
+    rgba(22,74,50,.12);
+}
+
+.success h2{
+  margin:0 0 9px;
+
+  color:var(--green);
+
+  font-size:26px;
+}
+
+.success p{
+  max-width:390px;
+
+  margin:0 auto 25px;
+
+  color:var(--muted);
+
+  font-size:13px;
+
+  line-height:1.65;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer{
+  padding:
+    22px 16px 105px;
+
+  background:#102b1e;
+
+  color:#aabbb0;
+
+  text-align:center;
+
+  font-size:10px;
+
+  line-height:1.6;
+}
+
+
+/* =========================================================
+   STICKY CTA
+========================================================= */
+
+.sticky{
+  position:fixed;
+
+  left:50%;
+
+  bottom:0;
+
+  z-index:100;
+
+  width:min(560px,100%);
+
+  padding:
+    8px
+    10px
+    calc(
+      8px +
+      env(safe-area-inset-bottom)
+    );
+
+  background:
+    rgba(255,255,255,.96);
+
+  backdrop-filter:blur(12px);
+
+  border-top:
+    1px solid
+    rgba(0,0,0,.08);
+
+  transform:
+    translateX(-50%);
+
+  transition:
+    opacity .2s ease,
+    transform .2s ease;
+}
+
+.sticky button{
+  position:relative;
+
+  width:100%;
+
+  overflow:hidden;
+
+  border:0;
+
+  border-radius:14px;
+
+  padding:14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #d99b32,
+      #b66e20
+    );
+
+  color:#fff;
+
+  font-size:15px;
+
+  font-weight:950;
+
+  cursor:pointer;
+
+  box-shadow:
+    0 7px 20px
+    rgba(181,111,31,.3);
+
+  animation:
+    stickyPulse 2s infinite;
+}
+
+.sticky button::after{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:-100%;
+
+  width:60%;
+  height:100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.4),
+      transparent
+    );
+
+  animation:
+    stickyShine 3s infinite;
+}
+
+@keyframes stickyShine{
+
+  0%{
+    left:-100%;
+  }
+
+  45%,
+  100%{
+    left:150%;
+  }
+
+}
+
+@keyframes stickyPulse{
+
+  0%,
+  100%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(1.015);
+  }
+
+}
+
+
+/* =========================================================
+   END MARKER
+========================================================= */
+
+#stickyEndMarker{
+  width:100%;
+
+  height:1px;
+
+  pointer-events:none;
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media(min-width:700px){
+
+  body{
+    padding:20px;
+  }
+
+  .page{
+    border-radius:22px;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+<!-- =======================================================
+     TOP SALE
+======================================================= -->
+
+<div class="top-sale">
+
+  🔥 FLASH SALE HÔM NAY
+  • ƯU ĐÃI CÓ GIỚI HẠN
+
+</div>
+
+
+
+<!-- =======================================================
+     HEADER
+======================================================= -->
+
+<header class="header">
+
+  <div class="logo-wrap">
+
+    <div class="logo-icon">
+      🍃
+    </div>
+
+    <div class="logo">
+      MỘC TRÀ
+    </div>
+
+  </div>
+
+
+  <a
+    href="#order"
+    class="header-order"
+  >
+
+    🛒 ĐẶT HÀNG
+
+  </a>
+
+</header>
+
+
+
+<!-- =======================================================
+     MAIN
+======================================================= -->
+
+<main id="main">
+
+
+
+<!-- =======================================================
+     HERO
+======================================================= -->
+
+<section class="hero">
+
+
+  <div class="hero-badge">
+
+    <span class="live-dot"></span>
+
+    ĐANG CÓ ƯU ĐÃI HÔM NAY
+
+  </div>
+
+
+
+  <!-- MEDIA -->
+
+  <div
+    class="media-slider"
+    id="mediaSlider"
+  >
+
+
+    <!-- VIDEO -->
+
+    <div
+      class="media-slide video-slide"
+      id="videoSlide"
+    >
+
+      <img
+        class="video-thumbnail"
+        src="thumb.png"
+        alt="Trà Shan Tuyết Mộc Châu"
+      >
+
+
+      <button
+        class="play-btn"
+        id="playVideoBtn"
+        type="button"
+        aria-label="Phát video"
+      >
+        ▶
+      </button>
+
+
+      <video
+        id="productVideo"
+        playsinline
+        preload="metadata"
+        controls
+        poster="thumb.png"
+      >
+
+        <source
+          src="./videotra.mp4"
+          type="video/mp4"
+        >
+
+        Trình duyệt không hỗ trợ video.
+
+      </video>
+
+
+      <div
+        class="video-error"
+        id="videoError"
+      >
+        Không tải được video.
+        Hãy kiểm tra file videotra.mp4.
+      </div>
+
+    </div>
+
+
+
+    <!-- IMAGE -->
+
+    <div class="media-slide">
+
+      <img
+        src="thumb.png"
+        alt="Trà Shan Tuyết"
+        loading="lazy"
+      >
+
+    </div>
+
+
+
+    <!-- IMAGE -->
+
+    <div class="media-slide">
+
+      <img
+        src="h1.jpg"
+        alt="Đóng gói Mộc Trà"
+        loading="lazy"
+      >
+
+    </div>
+
+
+
+    <!-- IMAGE -->
+
+    <div class="media-slide">
+
+      <img
+        src="h2.jpg"
+        alt="Pha trà Shan Tuyết"
+        loading="lazy"
+      >
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- DOTS -->
+
+  <div
+    class="media-dots"
+    id="mediaDots"
+  >
+
+    <span class="active"></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+  </div>
+
+
+
+  <div class="eyebrow">
+    Shan Tuyết cổ thụ • Mộc Châu
+  </div>
+
+
+  <h1>
+    Trà Shan Tuyết đậm vị,
+    thơm hậu tự nhiên
+  </h1>
+
+
+  <p class="hero-description">
+    Hương trà núi cao, vị đậm vừa phải,
+    hậu ngọt dễ uống – phù hợp dùng hằng ngày.
+  </p>
+
+
+  <div class="rating">
+
+    <span class="stars">
+      ★★★★★
+    </span>
+
+    <b>
+      4.9/5
+    </b>
+
+    <span>
+      • Nhiều khách hàng lựa chọn
+    </span>
+
+  </div>
+
+
+
+  <!-- FLASH -->
+
+  <div class="flash-box">
+
+    <div class="flash-top">
+
+      <div class="flash-title">
+        🔥 FLASH SALE KẾT THÚC SAU
+      </div>
+
+
+      <div class="countdown">
+
+        <span
+          class="time-box"
+          id="hours"
+        >
+          05
+        </span>
+
+        <span class="time-sep">
+          :
+        </span>
+
+        <span
+          class="time-box"
+          id="minutes"
+        >
+          59
+        </span>
+
+        <span class="time-sep">
+          :
+        </span>
+
+        <span
+          class="time-box"
+          id="seconds"
+        >
+          59
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="flash-bottom">
+
+      <span>
+        Số lượng ưu đãi còn lại
+      </span>
+
+      <div class="progress">
+        <span></span>
+      </div>
+
+      <span>
+        18%
+      </span>
+
+    </div>
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =======================================================
+     TRUST
+======================================================= -->
+
+<div class="trust-strip">
+
+
+  <div class="trust-item">
+
+    <div class="trust-icon">
+      🌿
+    </div>
+
+    <b>
+      Shan Tuyết
+    </b>
+
+    <span>
+      Mộc Châu
+    </span>
+
+  </div>
+
+
+  <div class="trust-item">
+
+    <div class="trust-icon">
+      📦
+    </div>
+
+    <b>
+      Đóng gói kỹ
+    </b>
+
+    <span>
+      Giao tận nơi
+    </span>
+
+  </div>
+
+
+  <div class="trust-item">
+
+    <div class="trust-icon">
+      💵
+    </div>
+
+    <b>
+      Thanh toán COD
+    </b>
+
+    <span>
+      Nhận rồi trả tiền
+    </span>
+
+  </div>
+
+
+</div>
+
+
+
+<!-- =======================================================
+     PRODUCT OPTIONS
+======================================================= -->
+
+<section
+  class="section"
+  id="buy"
+>
+
+  <h2>
+    🔥 Chọn gói ưu đãi
+  </h2>
+
+  <p class="sub">
+    Ưu đãi được áp dụng trực tiếp khi đặt hàng
+    trên trang này.
+  </p>
+
+
+  <div class="options">
+
+
+    <!-- 500G -->
+
+    <div
+      class="option"
+      data-weight="500g"
+      data-price="100000"
+    >
+
+      <div class="option-left">
+
+        <strong>
+          500g
+        </strong>
+
+        <small>
+          Gói dùng thử
+        </small>
+
+      </div>
+
+
+      <div class="option-right">
+
+        <div>
+
+          <span class="old-price">
+            129.000đ
+          </span>
+
+          <span class="price">
+            100.000đ
+          </span>
+
+        </div>
+
+        <span class="check"></span>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- 1KG -->
+
+    <div
+      class="option active recommended"
+      data-weight="1kg"
+      data-price="170000"
+    >
+
+      <div class="recommend-badge">
+        ⭐ ĐƯỢC CHỌN NHIỀU
+      </div>
+
+
+      <div class="option-left">
+
+        <strong>
+          1kg
+        </strong>
+
+        <small>
+          Gói tiết kiệm • Phù hợp dùng hằng ngày
+        </small>
+
+      </div>
+
+
+      <div class="option-right">
+
+        <div>
+
+          <span class="old-price">
+            239.000đ
+          </span>
+
+          <span class="price">
+            170.000đ
+          </span>
+
+        </div>
+
+        <span class="check"></span>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- 2KG -->
+
+    <div
+      class="option"
+      data-weight="2kg"
+      data-price="330000"
+    >
+
+      <div class="option-left">
+
+        <strong>
+          2kg
+        </strong>
+
+        <small>
+          Gói gia đình • Tiết kiệm hơn
+        </small>
+
+      </div>
+
+
+      <div class="option-right">
+
+        <div>
+
+          <span class="old-price">
+            478.000đ
+          </span>
+
+          <span class="price">
+            330.000đ
+          </span>
+
+        </div>
+
+        <span class="check"></span>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="saving-banner">
+
+    <div class="saving-banner-icon">
+      🎁
+    </div>
+
+    <div>
+
+      <b>
+        Ưu đãi trực tiếp trên đơn hàng
+      </b>
+
+      <span>
+        Chọn gói phù hợp rồi đặt hàng,
+        không cần nhập mã giảm giá.
+      </span>
+
+    </div>
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =======================================================
+     PRODUCT STORY
+======================================================= -->
+
+<section
+  class="section cream"
+>
+
+  <h2>
+    🌿 Shan Tuyết Mộc Châu có gì đặc biệt?
+  </h2>
+
+  <p class="sub">
+    Tìm hiểu kỹ hơn trước khi quyết định mua.
+  </p>
+
+
+  <div class="product-intro">
+
+
+    <div class="product-image">
+
+      <img
+        src="thumb.png"
+        alt="Trà Shan Tuyết Mộc Châu"
+        loading="lazy"
+      >
+
+      <div class="image-label">
+        Shan Tuyết • Mộc Châu
+      </div>
+
+    </div>
+
+
+    <div class="product-text">
+
+      <h3>
+        Hương vị trà núi cao
+      </h3>
+
+      <p>
+        Shan Tuyết là dòng trà có đặc trưng
+        hương thơm tự nhiên, vị trà rõ và
+        hậu vị dễ chịu.
+      </p>
+
+      <p>
+        Mộc Trà hướng tới một sản phẩm
+        <strong>
+          dễ uống hằng ngày
+        </strong>,
+        phù hợp cho cả những người đã quen
+        uống trà và người mới bắt đầu.
+      </p>
+
+      <p>
+        Trà có thể dùng nóng vào buổi sáng,
+        sau bữa ăn hoặc pha lạnh để thưởng thức
+        trong ngày.
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="feature-grid">
+
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        🍃
+      </div>
+
+      <b>
+        Hương thơm tự nhiên
+      </b>
+
+      <span>
+        Mùi trà thanh, dễ chịu,
+        không cần thêm hương liệu.
+      </span>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        🍵
+      </div>
+
+      <b>
+        Vị đậm vừa phải
+      </b>
+
+      <span>
+        Có vị trà rõ nhưng vẫn dễ
+        thưởng thức hằng ngày.
+      </span>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        💧
+      </div>
+
+      <b>
+        Hậu vị dễ chịu
+      </b>
+
+      <span>
+        Sau khi uống vẫn lưu lại
+        cảm giác hậu vị tự nhiên.
+      </span>
+
+    </div>
+
+
+    <div class="feature">
+
+      <div class="feature-icon">
+        🫖
+      </div>
+
+      <b>
+        Dễ pha
+      </b>
+
+      <span>
+        Có thể pha ấm nóng hoặc
+        pha lạnh tùy sở thích.
+      </span>
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =======================================================
+     PACKING IMAGE
+======================================================= -->
+
+<section class="section">
+
+  <div class="packing">
+
+    <div class="packing-image">
+
+      <img
+        src="h1.jpg"
+        alt="Đóng gói trà Mộc Trà"
+        loading="lazy"
+      >
+
+    </div>
+
+
+    <div class="packing-content">
+
+      <h3>
+        📦 Đóng gói cẩn thận trước khi giao
+      </h3>
+
+      <p>
+        Trà được đóng kín và kiểm tra trước
+        khi gửi đi, hạn chế ảnh hưởng của
+        quá trình vận chuyển đến sản phẩm.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     PRODUCT INFORMATION
+======================================================= -->
+
+<section class="section">
+
+  <h2>
+    📋 Thông tin sản phẩm
+  </h2>
+
+  <p class="sub">
+    Những thông tin bạn cần biết trước khi đặt hàng.
+  </p>
+
+
+  <div class="details">
+
+
+    <div class="detail-row">
+
+      <span>
+        Tên sản phẩm
+      </span>
+
+      <b>
+        Trà Shan Tuyết Mộc Châu
+      </b>
+
+    </div>
+
+
+    <div class="detail-row">
+
+      <span>
+        Khối lượng
+      </span>
+
+      <b>
+        500g / 1kg / 2kg
+      </b>
+
+    </div>
+
+
+    <div class="detail-row">
+
+      <span>
+        Hương vị
+      </span>
+
+      <b>
+        Thơm • Đậm vừa • Hậu tự nhiên
+      </b>
+
+    </div>
+
+
+    <div class="detail-row">
+
+      <span>
+        Cách dùng
+      </span>
+
+      <b>
+        Pha nóng hoặc pha lạnh
+      </b>
+
+    </div>
+
+
+    <div class="detail-row">
+
+      <span>
+        Bảo quản
+      </span>
+
+      <b>
+        Nơi khô ráo, kín mùi
+      </b>
+
+    </div>
+
+
+    <div class="detail-row">
+
+      <span>
+        Thanh toán
+      </span>
+
+      <b>
+        Nhận hàng kiểm tra rồi thanh toán
+      </b>
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- IMAGE -->
+
+  <div class="info-image">
+
+    <img
+      src="h2.jpg"
+      alt="Pha trà Shan Tuyết"
+      loading="lazy"
+    >
+
+  </div>
+
+
+
+  <!-- STORY -->
+
+  <div class="story">
+
+    <h3>
+      🫖 Gợi ý thưởng trà
+    </h3>
+
+    <p>
+      Với trà nóng, bạn có thể tráng ấm và
+      tráng trà nhanh trước khi pha để trà
+      bắt đầu nở và tỏa hương.
+    </p>
+
+    <p>
+      Tùy khẩu vị, điều chỉnh lượng trà và
+      thời gian ngâm để có độ đậm phù hợp.
+      Không nhất thiết phải pha quá đặc.
+    </p>
+
+    <p>
+      Nếu thích uống lạnh, có thể pha trà
+      đậm hơn một chút rồi thêm đá hoặc
+      để nguội và bảo quản mát.
+    </p>
+
+  </div>
+
+
+
+  <!-- BREW -->
+
+  <div class="brew">
+
+
+    <div class="brew-step">
+
+      <div class="brew-number">
+        1
+      </div>
+
+      <div>
+
+        <b>
+          Làm nóng ấm
+        </b>
+
+        <span>
+          Tráng nhanh ấm và chén bằng nước nóng.
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="brew-step">
+
+      <div class="brew-number">
+        2
+      </div>
+
+      <div>
+
+        <b>
+          Cho trà vào ấm
+        </b>
+
+        <span>
+          Điều chỉnh lượng trà theo khẩu vị.
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="brew-step">
+
+      <div class="brew-number">
+        3
+      </div>
+
+      <div>
+
+        <b>
+          Rót nước và thưởng thức
+        </b>
+
+        <span>
+          Pha vừa đủ, điều chỉnh thời gian
+          ngâm để trà đạt độ đậm mong muốn.
+        </span>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =======================================================
+     REVIEWS
+======================================================= -->
+
+<section
+  class="section cream"
+>
+
+  <h2>
+    ⭐ Khách hàng nói gì?
+  </h2>
+
+  <p class="sub">
+    Những cảm nhận thực tế có thể được bổ sung
+    dần từ feedback của khách hàng.
+  </p>
+
+
+  <div class="review-summary">
+
+    <div class="review-score">
+      4.9
+    </div>
+
+    <div class="review-summary-info">
+
+      <div class="stars">
+        ★★★★★
+      </div>
+
+      <b>
+        Đánh giá tích cực
+      </b>
+
+      <span>
+        Phần này nên cập nhật bằng dữ liệu
+        feedback thực tế của shop.
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <div class="reviews">
+
+
+    <div class="review">
+
+      <div class="review-top">
+
+        <div class="reviewer">
+
+          <div class="avatar">
+            A
+          </div>
+
+          <div>
+
+            <div class="reviewer-name">
+              Anh A.
+            </div>
+
+            <span class="verified">
+              ✓ Khách hàng đã mua
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="review-stars">
+          ★★★★★
+        </div>
+
+      </div>
+
+
+      <p>
+        “Trà thơm, vị khá đậm nhưng dễ uống.
+        Mình thường pha một ấm vào buổi sáng,
+        uống cả ngày khá tiện.”
+      </p>
+
+    </div>
+
+
+
+    <div class="review">
+
+      <div class="review-top">
+
+        <div class="reviewer">
+
+          <div class="avatar">
+            H
+          </div>
+
+          <div>
+
+            <div class="reviewer-name">
+              Chị H.
+            </div>
+
+            <span class="verified">
+              ✓ Khách hàng đã mua
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="review-stars">
+          ★★★★★
+        </div>
+
+      </div>
+
+
+      <p>
+        “Đóng gói chắc chắn, trà có mùi thơm
+        tự nhiên. Mình thích uống nóng sau
+        bữa sáng.”
+      </p>
+
+    </div>
+
+
+
+    <div class="review">
+
+      <div class="review-top">
+
+        <div class="reviewer">
+
+          <div class="avatar">
+            M
+          </div>
+
+          <div>
+
+            <div class="reviewer-name">
+              Anh M.
+            </div>
+
+            <span class="verified">
+              ✓ Khách hàng đã mua
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="review-stars">
+          ★★★★★
+        </div>
+
+      </div>
+
+
+      <p>
+        “Vị trà đậm vừa, hậu khá dễ chịu.
+        Đã thử cả pha nóng và pha lạnh,
+        đều ổn.”
+      </p>
+
+    </div>
+
+
+
+    <div class="review">
+
+      <div class="review-top">
+
+        <div class="reviewer">
+
+          <div class="avatar">
+            T
+          </div>
+
+          <div>
+
+            <div class="reviewer-name">
+              Chị T.
+            </div>
+
+            <span class="verified">
+              ✓ Khách hàng đã mua
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="review-stars">
+          ★★★★★
+        </div>
+
+      </div>
+
+
+      <p>
+        “Mình mua gói 1kg để dùng ở nhà.
+        Đóng gói kỹ, giao tới vẫn nguyên vẹn.”
+      </p>
+
+    </div>
+
+
+
+    <div class="review">
+
+      <div class="review-top">
+
+        <div class="reviewer">
+
+          <div class="avatar">
+            N
+          </div>
+
+          <div>
+
+            <div class="reviewer-name">
+              Anh N.
+            </div>
+
+            <span class="verified">
+              ✓ Khách hàng đã mua
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="review-stars">
+          ★★★★★
+        </div>
+
+      </div>
+
+
+      <p>
+        “Trà có hương thơm khá rõ, uống buổi
+        sáng thấy dễ chịu. Giá gói 1kg hợp lý.”
+      </p>
+
+    </div>
+
+
+
+    <div class="review">
+
+      <div class="review-top">
+
+        <div class="reviewer">
+
+          <div class="avatar">
+            L
+          </div>
+
+          <div>
+
+            <div class="reviewer-name">
+              Chị L.
+            </div>
+
+            <span class="verified">
+              ✓ Khách hàng đã mua
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="review-stars">
+          ★★★★★
+        </div>
+
+      </div>
+
+
+      <p>
+        “Đặt thử 500g trước, trà dễ uống.
+        Lần sau mình sẽ cân nhắc lấy gói lớn hơn.”
+      </p>
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="order-proof">
+
+    <div class="order-proof-row">
+
+      <div class="mini-avatars">
+
+        <div class="mini-avatar">
+          A
+        </div>
+
+        <div class="mini-avatar">
+          H
+        </div>
+
+        <div class="mini-avatar">
+          M
+        </div>
+
+        <div class="mini-avatar">
+          T
+        </div>
+
+        <div class="mini-avatar">
+          +
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <b>
+          Nhiều khách hàng đang quan tâm sản phẩm
+        </b>
+
+        <span>
+          Feedback thật có thể cập nhật thêm tại đây.
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =======================================================
+     DELIVERY
+======================================================= -->
+
+<section class="section">
+
+  <h2>
+    🚚 Đặt hàng đơn giản
+  </h2>
+
+  <p class="sub">
+    Chỉ vài bước để nhận trà tại nhà.
+  </p>
+
+
+  <div class="delivery-box">
+
+
+    <div class="delivery-item">
+
+      <div class="delivery-icon">
+        📝
+      </div>
+
+      <div>
+
+        <b>
+          1. Điền thông tin
+        </b>
+
+        <span>
+          Nhập tên, số điện thoại và địa chỉ nhận hàng.
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="delivery-item">
+
+      <div class="delivery-icon">
+        📞
+      </div>
+
+      <div>
+
+        <b>
+          2. Xác nhận đơn
+        </b>
+
+        <span>
+          Mộc Trà liên hệ xác nhận trước khi gửi.
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="delivery-item">
+
+      <div class="delivery-icon">
+        🚚
+      </div>
+
+      <div>
+
+        <b>
+          3. Giao tận nơi
+        </b>
+
+        <span>
+          Đơn hàng được gửi tới địa chỉ bạn cung cấp.
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="delivery-item">
+
+      <div class="delivery-icon">
+        💵
+      </div>
+
+      <div>
+
+        <b>
+          4. Nhận hàng rồi thanh toán
+        </b>
+
+        <span>
+          Thanh toán khi nhận hàng theo hình thức COD.
+        </span>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     ORDER FORM
+======================================================= -->
+
+<section
+  class="section form-section"
+  id="order"
+>
+
+  <div class="form-heading">
+
+    <div class="form-badge">
+      🔥 ƯU ĐÃI ĐANG ĐƯỢC ÁP DỤNG
+    </div>
+
+    <h2>
+      Đặt trà ngay hôm nay
+    </h2>
+
+    <p class="sub">
+      Điền thông tin bên dưới,
+      Mộc Trà sẽ liên hệ xác nhận đơn.
+    </p>
+
+  </div>
+
+
+
+  <form
+    id="orderForm"
+    novalidate
+  >
+
+
+    <div class="form-group">
+
+      <label for="name">
+        HỌ VÀ TÊN
+      </label>
+
+      <input
+        id="name"
+        name="name"
+        type="text"
+        autocomplete="name"
+        required
+        placeholder="Nguyễn Văn A"
+      >
+
+    </div>
+
+
+
+    <div class="form-group">
+
+      <label for="phone">
+        SỐ ĐIỆN THOẠI
+      </label>
+
+      <input
+        id="phone"
+        name="phone"
+        type="tel"
+        inputmode="tel"
+        autocomplete="tel"
+        required
+        placeholder="09xxxxxxxx"
+      >
+
+    </div>
+
+
+
+    <div class="form-group">
+
+      <label for="address">
+        ĐỊA CHỈ NHẬN HÀNG
+      </label>
+
+      <textarea
+        id="address"
+        name="address"
+        autocomplete="street-address"
+        required
+        placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành"
+      ></textarea>
+
+    </div>
+
+
+
+    <!-- SUMMARY -->
+
+    <div class="summary">
+
+      <div class="summary-title">
+        🛒 Thông tin đơn hàng
+      </div>
+
+
+      <div class="summary-row">
+
+        <span>
+          Sản phẩm
+        </span>
+
+        <b id="summaryProduct">
+          Trà Shan Tuyết 1kg
+        </b>
+
+      </div>
+
+
+      <div class="summary-row">
+
+        <span>
+          Đơn giá
+        </span>
+
+        <b id="summaryPrice">
+          170.000đ
+        </b>
+
+      </div>
+
+
+      <div class="summary-row">
+
+        <span>
+          Số lượng
+        </span>
+
+        <div class="qty-control">
+
+          <button
+            type="button"
+            class="qty-btn"
+            id="minus"
+          >
+            −
+          </button>
+
+          <span
+            class="qty-number"
+            id="qty"
+          >
+            1
+          </span>
+
+          <button
+            type="button"
+            class="qty-btn"
+            id="plus"
+          >
+            +
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="summary-row total">
+
+        <span>
+          TỔNG THANH TOÁN
+        </span>
+
+        <span id="total">
+          170.000đ
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- CTA -->
+
+    <button
+      class="main-cta"
+      type="submit"
+      id="submitOrderBtn"
+    >
+
+      🔥 ĐẶT HÀNG – NHẬN HÀNG THANH TOÁN
+
+    </button>
+
+
+    <div class="cta-sub">
+
+      ✓ Không cần thanh toán trước
+      &nbsp; • &nbsp;
+      ✓ Nhận hàng kiểm tra rồi thanh toán
+
+    </div>
+
+
+
+    <!-- GUARANTEE -->
+
+    <div class="guarantee">
+
+
+      <div class="guarantee-item">
+
+        <b>
+          🔒 BẢO MẬT
+        </b>
+
+        <span>
+          Thông tin đơn hàng
+        </span>
+
+      </div>
+
+
+      <div class="guarantee-item">
+
+        <b>
+          📞 XÁC NHẬN
+        </b>
+
+        <span>
+          Gọi xác nhận trước gửi
+        </span>
+
+      </div>
+
+
+      <div class="guarantee-item">
+
+        <b>
+          🚚 COD
+        </b>
+
+        <span>
+          Nhận rồi thanh toán
+        </span>
+
+      </div>
+
+
+    </div>
+
+
+  </form>
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- =======================================================
+     SUCCESS
+======================================================= -->
+
+<section
+  class="success"
+  id="success"
+>
+
+  <div class="success-icon">
+    ✓
+  </div>
+
+
+  <h2>
+    Đặt hàng thành công!
+  </h2>
+
+
+  <p>
+    Cảm ơn bạn đã lựa chọn Mộc Trà.
+    Bên mình sẽ liên hệ xác nhận đơn hàng
+    trong thời gian sớm nhất.
+  </p>
+
+
+  <button
+    class="main-cta"
+    id="continueShopping"
+    type="button"
+  >
+
+    ← TIẾP TỤC XEM SẢN PHẨM
+
+  </button>
+
+</section>
+
+
+
+<!-- =======================================================
+     FOOTER
+======================================================= -->
+
+<footer class="footer">
+
+  <b>
+    MỘC TRÀ
+  </b>
+
+  <br>
+
+  Trà Shan Tuyết cổ thụ • Mộc Châu
+
+  <br><br>
+
+  © MỘC TRÀ • Thông tin trên trang chỉ nhằm
+  giới thiệu sản phẩm.
+
+</footer>
+
+
+
+<!-- =======================================================
+     END MARKER
+======================================================= -->
+
+<div id="stickyEndMarker"></div>
+
+
+</div>
+
+
+
+<!-- =======================================================
+     STICKY CTA
+======================================================= -->
+
+<div
+  class="sticky"
+  id="stickyBar"
+>
+
+  <button
+    id="stickyOrderBtn"
+    type="button"
+  >
+
+    🔥 ĐẶT HÀNG NGAY
+    •
+    <span id="stickyPrice">
+      170.000đ
+    </span>
+
+  </button>
+
+</div>
+
+
+
+<script>
+
+/* =========================================================
+   MONEY
+========================================================= */
+
+const money = n =>
+
+  new Intl.NumberFormat('vi-VN')
+    .format(n) + 'đ';
+
+
+
+/* =========================================================
+   STATE
+========================================================= */
+
+let selected = {
+
+  weight:'1kg',
+
+  price:170000
+
+};
+
+let qty = 1;
+
+let successMode = false;
+
+
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const opts =
+  document.querySelectorAll('.option');
+
+const main =
+  document.getElementById('main');
+
+const success =
+  document.getElementById('success');
+
+const orderForm =
+  document.getElementById('orderForm');
+
+const orderSection =
+  document.getElementById('order');
+
+const stickyBar =
+  document.getElementById('stickyBar');
+
+const stickyOrderBtn =
+  document.getElementById('stickyOrderBtn');
+
+const stickyEndMarker =
+  document.getElementById('stickyEndMarker');
+
+const submitOrderBtn =
+  document.getElementById('submitOrderBtn');
+
+
+
+/* =========================================================
+   RENDER
+========================================================= */
+
+function render(){
+
+  document
+    .getElementById('summaryProduct')
+    .textContent =
+      'Trà Shan Tuyết ' +
+      selected.weight;
+
+
+  document
+    .getElementById('summaryPrice')
+    .textContent =
+      money(selected.price);
+
+
+  document
+    .getElementById('qty')
+    .textContent =
+      qty;
+
+
+  document
+    .getElementById('total')
+    .textContent =
+      money(
+        selected.price * qty
+      );
+
+
+  document
+    .getElementById('stickyPrice')
+    .textContent =
+      money(
+        selected.price * qty
+      );
+
+}
+
+
+
+/* =========================================================
+   PRODUCT OPTIONS
+========================================================= */
+
+opts.forEach(option => {
+
+  option.addEventListener(
+    'click',
+    () => {
+
+      opts.forEach(item => {
+
+        item.classList.remove(
+          'active'
+        );
+
+      });
+
+
+      option.classList.add(
+        'active'
+      );
+
+
+      selected = {
+
+        weight:
+          option.dataset.weight,
+
+        price:
+          Number(
+            option.dataset.price
+          )
+
+      };
+
+
+      render();
+
+    }
+  );
+
+});
+
+
+
+/* =========================================================
+   QUANTITY
+========================================================= */
+
+document
+  .getElementById('minus')
+  .addEventListener(
+    'click',
+    () => {
+
+      qty =
+        Math.max(
+          1,
+          qty - 1
+        );
+
+      render();
+
+    }
+  );
+
+
+document
+  .getElementById('plus')
+  .addEventListener(
+    'click',
+    () => {
+
+      qty =
+        Math.min(
+          20,
+          qty + 1
+        );
+
+      render();
+
+    }
+  );
+
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+const videoSlide =
+  document.getElementById(
+    'videoSlide'
+  );
+
+const productVideo =
+  document.getElementById(
+    'productVideo'
+  );
+
+const playVideoBtn =
+  document.getElementById(
+    'playVideoBtn'
+  );
+
+const videoError =
+  document.getElementById(
+    'videoError'
+  );
+
+
+playVideoBtn.addEventListener(
+  'click',
+  async function(e){
+
+    e.preventDefault();
+
+    e.stopPropagation();
+
+
+    videoError.style.display =
+      'none';
+
+
+    videoSlide.classList.add(
+      'playing'
+    );
+
+
+    try{
+
+      await productVideo.play();
+
+    }
+
+    catch(error){
+
+      console.error(
+        error
+      );
+
+      videoError.style.display =
+        'block';
+
+    }
+
+  }
+);
+
+
+productVideo.addEventListener(
+  'play',
+  () => {
+
+    videoSlide.classList.add(
+      'playing'
+    );
+
+  }
+);
+
+
+productVideo.addEventListener(
+  'error',
+  () => {
+
+    videoError.style.display =
+      'block';
+
+  }
+);
+
+
+
+/* =========================================================
+   MEDIA CAROUSEL
+========================================================= */
+
+const slider =
+  document.getElementById(
+    'mediaSlider'
+  );
+
+const slides =
+  document.querySelectorAll(
+    '.media-slide'
+  );
+
+const dots =
+  document.querySelectorAll(
+    '#mediaDots span'
+  );
+
+let currentSlide = 0;
+
+
+slider.addEventListener(
+  'scroll',
+  () => {
+
+    const width =
+      slider.offsetWidth;
+
+
+    if(!width){
+      return;
+    }
+
+
+    const index =
+      Math.round(
+        slider.scrollLeft /
+        width
+      );
+
+
+    if(index === currentSlide){
+      return;
+    }
+
+
+    currentSlide =
+      index;
+
+
+    dots.forEach(
+      (dot,i) => {
+
+        dot.classList.toggle(
+          'active',
+          i === index
+        );
+
+      }
+    );
+
+
+    if(index !== 0){
+
+      productVideo.pause();
+
+    }
+
+  },
+  {
+    passive:true
+  }
+);
+
+
+
+/* =========================================================
+   DOT CLICK
+========================================================= */
+
+dots.forEach(
+  (dot,index) => {
+
+    dot.addEventListener(
+      'click',
+      () => {
+
+        slides[index]
+          .scrollIntoView({
+
+            behavior:'smooth',
+
+            block:'nearest',
+
+            inline:'start'
+
+          });
+
+      }
+    );
+
+  }
+);
+
+
+
+/* =========================================================
+   COUNTDOWN
+========================================================= */
+
+let saleEnd =
+  Date.now() +
+  (
+    5 * 60 * 60 * 1000
+  ) +
+  (
+    59 * 60 * 1000
+  );
+
+
+function updateCountdown(){
+
+  let diff =
+    saleEnd -
+    Date.now();
+
+
+  if(diff <= 0){
+
+    saleEnd =
+      Date.now() +
+      (
+        6 * 60 * 60 * 1000
+      );
+
+    diff =
+      saleEnd -
+      Date.now();
+
+  }
+
+
+  const totalSeconds =
+    Math.floor(
+      diff / 1000
+    );
+
+
+  const hours =
+    Math.floor(
+      totalSeconds / 3600
+    );
+
+
+  const minutes =
+    Math.floor(
+      (
+        totalSeconds % 3600
+      ) / 60
+    );
+
+
+  const seconds =
+    totalSeconds % 60;
+
+
+  document
+    .getElementById('hours')
+    .textContent =
+      String(hours)
+        .padStart(2,'0');
+
+
+  document
+    .getElementById('minutes')
+    .textContent =
+      String(minutes)
+        .padStart(2,'0');
+
+
+  document
+    .getElementById('seconds')
+    .textContent =
+      String(seconds)
+        .padStart(2,'0');
+
+}
+
+
+updateCountdown();
+
+setInterval(
+  updateCountdown,
+  1000
+);
+
+
+
+/* =========================================================
+   STICKY
+========================================================= */
+
+function hideSticky(){
+
+  stickyBar.style.display =
+    'none';
+
+}
+
+
+function showSticky(){
+
+  if(successMode){
+
+    hideSticky();
+
+    return;
+
+  }
+
+
+  if(
+    main.style.display ===
+    'none'
+  ){
+
+    hideSticky();
+
+    return;
+
+  }
+
+
+  stickyBar.style.display =
+    'block';
+
+}
+
+
+
+/* =========================================================
+   CLICK STICKY
+========================================================= */
+
+stickyOrderBtn.addEventListener(
+  'click',
+  function(e){
+
+    e.preventDefault();
+
+    e.stopPropagation();
+
+
+    /*
+       Ẩn ngay sau 1 click
+    */
+
+    hideSticky();
+
+
+    /*
+       Cuộn tới form
+    */
+
+    orderSection.scrollIntoView({
+
+      behavior:'smooth',
+
+      block:'start'
+
+    });
+
+  }
+);
+
+
+
+/* =========================================================
+   BOTTOM OBSERVER
+========================================================= */
+
+const endObserver =
+  new IntersectionObserver(
+    function(entries){
+
+      const entry =
+        entries[0];
+
+
+      if(
+        entry.isIntersecting
+      ){
+
+        hideSticky();
+
+      }
+
+      else{
+
+        showSticky();
+
+      }
+
+    },
+    {
+
+      root:null,
+
+      threshold:0,
+
+      rootMargin:
+        '0px 0px 80px 0px'
+
+    }
+  );
+
+
+endObserver.observe(
+  stickyEndMarker
+);
+
+
+
+/* =========================================================
+   SCROLL
+========================================================= */
+
+let scrollFrame = null;
+
+
+window.addEventListener(
+  'scroll',
+  function(){
+
+    if(scrollFrame){
+      return;
+    }
+
+
+    scrollFrame =
+      requestAnimationFrame(
+        function(){
+
+          if(successMode){
+
+            hideSticky();
+
+            scrollFrame = null;
+
+            return;
+
+          }
+
+
+          if(
+            main.style.display ===
+            'none'
+          ){
+
+            hideSticky();
+
+            scrollFrame = null;
+
+            return;
+
+          }
+
+
+          const rect =
+            orderSection
+              .getBoundingClientRect();
+
+
+          /*
+             Khi tới form
+             => ẩn sticky
+          */
+
+          if(rect.top <= 120){
+
+            hideSticky();
+
+          }
+
+          else{
+
+            /*
+               Cuộn ngược lên
+               => hiện lại
+            */
+
+            showSticky();
+
+          }
+
+
+          scrollFrame = null;
+
+        }
+      );
+
+  },
+  {
+    passive:true
+  }
+);
+
+
+
+/* =========================================================
+   FORM SUBMIT
+========================================================= */
+
+orderForm.addEventListener(
+  'submit',
+  function(e){
+
+    e.preventDefault();
+
+    e.stopPropagation();
+
+
+    const name =
+      document
+        .getElementById('name')
+        .value
+        .trim();
+
+
+    const phone =
+      document
+        .getElementById('phone')
+        .value
+        .replace(
+          /\D/g,
+          ''
+        );
+
+
+    const address =
+      document
+        .getElementById('address')
+        .value
+        .trim();
+
+
+
+    if(!name){
+
+      alert(
+        'Vui lòng nhập họ và tên.'
+      );
+
+      document
+        .getElementById('name')
+        .focus();
+
+      return;
+
+    }
+
+
+
+    if(
+      !/^(0|84)?\d{9,10}$/
+        .test(phone)
+    ){
+
+      alert(
+        'Vui lòng nhập số điện thoại hợp lệ.'
+      );
+
+      document
+        .getElementById('phone')
+        .focus();
+
+      return;
+
+    }
+
+
+
+    if(!address){
+
+      alert(
+        'Vui lòng nhập địa chỉ nhận hàng.'
+      );
+
+      document
+        .getElementById('address')
+        .focus();
+
+      return;
+
+    }
+
+
+
+    /*
+       Hiện trạng thái xử lý
+    */
+
+    submitOrderBtn.disabled =
+      true;
+
+    submitOrderBtn.textContent =
+      'ĐANG XỬ LÝ...';
+
+
+    successMode = true;
+
+    hideSticky();
+
+
+    setTimeout(
+      function(){
+
+        main.style.display =
+          'none';
+
+
+        success.style.display =
+          'block';
+
+
+        hideSticky();
+
+
+        window.scrollTo({
+
+          top:0,
+
+          behavior:'smooth'
+
+        });
+
+      },
+      350
+    );
+
+  }
+);
+
+
+
+/* =========================================================
+   CONTINUE SHOPPING
+========================================================= */
+
+document
+  .getElementById(
+    'continueShopping'
+  )
+  .addEventListener(
+    'click',
+    function(){
+
+      successMode = false;
+
+
+      success.style.display =
+        'none';
+
+
+      main.style.display =
+        'block';
+
+
+      orderForm.reset();
+
+
+      qty = 1;
+
+
+      selected = {
+
+        weight:'1kg',
+
+        price:170000
+
+      };
+
+
+      opts.forEach(
+        option => {
+
+          option.classList.remove(
+            'active'
+          );
+
+        }
+      );
+
+
+      const defaultOption =
+        document.querySelector(
+          '.option[data-weight="1kg"]'
+        );
+
+
+      if(defaultOption){
+
+        defaultOption.classList.add(
+          'active'
+        );
+
+      }
+
+
+      submitOrderBtn.disabled =
+        false;
+
+
+      submitOrderBtn.textContent =
+        '🔥 ĐẶT HÀNG – NHẬN HÀNG THANH TOÁN';
+
+
+      render();
+
+
+      window.scrollTo({
+
+        top:0,
+
+        behavior:'smooth'
+
+      });
+
+
+      setTimeout(
+        function(){
+
+          showSticky();
+
+        },
+        400
+      );
+
+    }
+  );
+
+
+
+/* =========================================================
+   INITIAL
+========================================================= */
+
+render();
+
+showSticky();
+
+</script>
+
+
+</body>
+
+</html>
