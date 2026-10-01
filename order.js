@@ -1,15 +1,22 @@
 /*************************************************
  * MỘC TRÀ - ORDER.JS
  *
+ * Landing page
+ *      ↓
+ * HTML Form POST
+ *      ↓
+ * Google Apps Script
+ *      ↓
+ * Google Sheet
+ *      ↓
+ * iframe load
+ *      ↓
+ * SUCCESS
+ *
  * Không dùng fetch()
  * Không dùng CORS
- *
- * Gửi đơn:
- * HTML Form → Apps Script → Google Sheet
- *                         ↓
- *                    postMessage
+ * Không phụ thuộc postMessage
  *************************************************/
-
 
 const ORDER_API_URL =
   "https://script.google.com/macros/s/AKfycbwGYaRJSAjmxNXQEs2dmpKGJkdd2P7TuP8ateEQvxtWBqONFXx74i5jqjiX1r2e9z33/exec";
@@ -20,7 +27,6 @@ const ORDER_API_URL =
 ================================================= */
 
 const orderState = {
-
   selected: {
     weight: "1kg",
     price: 350000
@@ -29,16 +35,14 @@ const orderState = {
   qty: 1,
 
   submitting: false
-
 };
 
 
 /* =================================================
-   FORMAT TIỀN
+   FORMAT MONEY
 ================================================= */
 
 function formatMoney(value) {
-
   value = Number(value || 0);
 
   return value.toLocaleString("vi-VN") + "đ";
@@ -46,34 +50,35 @@ function formatMoney(value) {
 
 
 /* =================================================
-   TÌM ELEMENT
+   HELPER
 ================================================= */
 
 function $(id) {
-
   return document.getElementById(id);
-
 }
 
 
 /* =================================================
-   RENDER TÓM TẮT ĐƠN
+   RENDER ORDER SUMMARY
 ================================================= */
 
 function renderOrderSummary() {
 
-  const weight = orderState.selected.weight;
+  const weight =
+    orderState.selected.weight;
 
-  const price = Number(orderState.selected.price);
+  const price =
+    Number(orderState.selected.price);
 
-  const qty = Number(orderState.qty);
+  const qty =
+    Number(orderState.qty);
 
-  const total = price * qty;
+  const total =
+    price * qty;
 
 
-  // Sản phẩm
-
-  const summaryProduct = $("summaryProduct");
+  const summaryProduct =
+    $("summaryProduct");
 
   if (summaryProduct) {
 
@@ -83,9 +88,8 @@ function renderOrderSummary() {
   }
 
 
-  // Giá
-
-  const summaryPrice = $("summaryPrice");
+  const summaryPrice =
+    $("summaryPrice");
 
   if (summaryPrice) {
 
@@ -95,20 +99,19 @@ function renderOrderSummary() {
   }
 
 
-  // Quantity
-
-  const qtyValue = $("qtyValue");
+  const qtyValue =
+    $("qtyValue");
 
   if (qtyValue) {
 
-    qtyValue.textContent = qty;
+    qtyValue.textContent =
+      qty;
 
   }
 
 
-  // Tổng
-
-  const summaryTotal = $("summaryTotal");
+  const summaryTotal =
+    $("summaryTotal");
 
   if (summaryTotal) {
 
@@ -118,9 +121,8 @@ function renderOrderSummary() {
   }
 
 
-  // Sticky price
-
-  const stickyPrice = $("stickyPrice");
+  const stickyPrice =
+    $("stickyPrice");
 
   if (stickyPrice) {
 
@@ -133,14 +135,15 @@ function renderOrderSummary() {
 
 
 /* =================================================
-   CHỌN SẢN PHẨM
+   PRODUCT OPTIONS
 ================================================= */
 
 function setupProductOptions() {
 
-  const options = document.querySelectorAll(
-    "[data-weight][data-price]"
-  );
+  const options =
+    document.querySelectorAll(
+      "[data-weight][data-price]"
+    );
 
 
   if (!options.length) {
@@ -164,8 +167,11 @@ function setupProductOptions() {
 
 
     orderState.selected = {
+
       weight: weight,
+
       price: price
+
     };
 
 
@@ -201,34 +207,39 @@ function setupProductOptions() {
   });
 
 
-  // Tìm option đang active
-
   let activeOption =
-    Array.from(options).find(function(option) {
+    Array.from(options).find(
+      function(option) {
 
-      return option.classList.contains("active") ||
-             option.classList.contains("selected");
+        return (
+          option.classList.contains("active") ||
+          option.classList.contains("selected")
+        );
 
-    });
+      }
+    );
 
-
-  // Nếu không có → mặc định 1kg
 
   if (!activeOption) {
 
     activeOption =
-      Array.from(options).find(function(option) {
+      Array.from(options).find(
+        function(option) {
 
-        return option.dataset.weight === "1kg";
+          return (
+            option.dataset.weight === "1kg"
+          );
 
-      });
+        }
+      );
 
   }
 
 
   if (!activeOption) {
 
-    activeOption = options[0];
+    activeOption =
+      options[0];
 
   }
 
@@ -244,11 +255,14 @@ function setupProductOptions() {
 
 function setupQuantity() {
 
-  const minus = $("qtyMinus");
+  const minus =
+    $("qtyMinus");
 
-  const plus = $("qtyPlus");
+  const plus =
+    $("qtyPlus");
 
-  const qtyValue = $("qtyValue");
+  const qtyValue =
+    $("qtyValue");
 
 
   if (!minus || !plus) {
@@ -266,6 +280,7 @@ function setupQuantity() {
         orderState.qty;
 
     }
+
 
     renderOrderSummary();
 
@@ -328,7 +343,7 @@ function validatePhone(phone) {
 
 
 /* =================================================
-   MARKETING / UTM
+   UTM
 ================================================= */
 
 function getMarketingData() {
@@ -362,7 +377,7 @@ function getMarketingData() {
 
 
 /* =================================================
-   TẠO IFRAME ẨN
+   CREATE HIDDEN IFRAME
 ================================================= */
 
 function createOrderIframe() {
@@ -387,8 +402,10 @@ function createOrderIframe() {
   iframe.id =
     "mocTraOrderIframe";
 
+
   iframe.name =
     "mocTraOrderIframe";
+
 
   iframe.style.position =
     "fixed";
@@ -421,7 +438,9 @@ function createOrderIframe() {
   );
 
 
-  document.body.appendChild(iframe);
+  document.body.appendChild(
+    iframe
+  );
 
 
   return iframe;
@@ -430,7 +449,7 @@ function createOrderIframe() {
 
 
 /* =================================================
-   SET LOADING BUTTON
+   LOADING BUTTON
 ================================================= */
 
 function setSubmitLoading(loading) {
@@ -448,14 +467,21 @@ function setSubmitLoading(loading) {
 
   if (loading) {
 
-    button.dataset.originalText =
-      button.innerHTML;
+    if (!button.dataset.originalText) {
+
+      button.dataset.originalText =
+        button.innerHTML;
+
+    }
 
 
-    button.disabled = true;
+    button.disabled =
+      true;
+
 
     button.style.pointerEvents =
       "none";
+
 
     button.style.opacity =
       "0.7";
@@ -467,10 +493,13 @@ function setSubmitLoading(loading) {
 
   } else {
 
-    button.disabled = false;
+    button.disabled =
+      false;
+
 
     button.style.pointerEvents =
       "";
+
 
     button.style.opacity =
       "";
@@ -489,7 +518,7 @@ function setSubmitLoading(loading) {
 
 
 /* =================================================
-   TẠO FORM POST ẨN
+   CREATE HIDDEN FORM
 ================================================= */
 
 function createHiddenForm(data) {
@@ -518,16 +547,13 @@ function createHiddenForm(data) {
     "none";
 
 
-  /*
-   * Các field này sẽ trở thành
-   * e.parameter trong Apps Script.
-   */
-
   Object.keys(data).forEach(
     function(key) {
 
       const input =
-        document.createElement("input");
+        document.createElement(
+          "input"
+        );
 
 
       input.type =
@@ -544,22 +570,32 @@ function createHiddenForm(data) {
           : String(data[key]);
 
 
-      form.appendChild(input);
+      form.appendChild(
+        input
+      );
 
     }
   );
 
 
-  document.body.appendChild(form);
+  document.body.appendChild(
+    form
+  );
 
 
-  return form;
+  return {
+
+    form: form,
+
+    iframe: iframe
+
+  };
 
 }
 
 
 /* =================================================
-   GỬI ĐƠN
+   SEND ORDER
 ================================================= */
 
 function sendOrderToGoogleSheet(data) {
@@ -567,100 +603,36 @@ function sendOrderToGoogleSheet(data) {
   return new Promise(
     function(resolve, reject) {
 
-      let finished = false;
+      let finished =
+        false;
+
+      let form =
+        null;
+
+      let iframe =
+        null;
+
+      let timeout =
+        null;
 
 
       function cleanup() {
 
-        window.removeEventListener(
-          "message",
-          messageHandler
-        );
+        if (iframe) {
 
-
-        if (form && form.parentNode) {
-
-          form.parentNode.removeChild(form);
-
-        }
-
-      }
-
-
-      function finishSuccess(result) {
-
-        if (finished) {
-
-          return;
-
-        }
-
-
-        finished = true;
-
-        clearTimeout(timeout);
-
-        cleanup();
-
-        resolve(result);
-
-      }
-
-
-      function finishError(error) {
-
-        if (finished) {
-
-          return;
-
-        }
-
-
-        finished = true;
-
-        clearTimeout(timeout);
-
-        cleanup();
-
-        reject(error);
-
-      }
-
-
-      function messageHandler(event) {
-
-        const result =
-          event.data;
-
-
-        if (!result) {
-
-          return;
+          iframe.onload =
+            null;
 
         }
 
 
         if (
-          result.type !==
-          "MOC_TRA_ORDER_RESULT"
+          form &&
+          form.parentNode
         ) {
 
-          return;
-
-        }
-
-
-        if (result.success) {
-
-          finishSuccess(result);
-
-        } else {
-
-          finishError(
-            new Error(
-              result.message ||
-              "Không thể ghi đơn hàng."
-            )
+          form.parentNode.removeChild(
+            form
           );
 
         }
@@ -668,45 +640,173 @@ function sendOrderToGoogleSheet(data) {
       }
 
 
-      window.addEventListener(
-        "message",
-        messageHandler
-      );
+      function success() {
+
+        if (finished) {
+
+          return;
+
+        }
 
 
-      const form =
-        createHiddenForm(data);
+        finished =
+          true;
 
 
-      /*
-       * Timeout 30 giây.
-       *
-       * Không tự động gửi lại để tránh
-       * tạo đơn trùng.
-       */
+        if (timeout) {
 
-      const timeout =
-        setTimeout(
-          function() {
+          clearTimeout(
+            timeout
+          );
 
-            finishError(
-              new Error(
-                "Máy chủ không phản hồi sau 30 giây. Vui lòng kiểm tra Google Sheet trước khi gửi lại."
-              )
-            );
+        }
 
-          },
-          30000
+
+        cleanup();
+
+
+        console.log(
+          "MỘC TRÀ: Google Apps Script đã nhận request."
         );
+
+
+        resolve({
+
+          success: true,
+
+          orderCode: "",
+
+          message:
+            "Đặt hàng thành công."
+
+        });
+
+      }
+
+
+      function failure(message) {
+
+        if (finished) {
+
+          return;
+
+        }
+
+
+        finished =
+          true;
+
+
+        if (timeout) {
+
+          clearTimeout(
+            timeout
+          );
+
+        }
+
+
+        cleanup();
+
+
+        reject(
+          new Error(
+            message ||
+            "Không thể gửi đơn hàng."
+          )
+        );
+
+      }
 
 
       try {
 
+        const result =
+          createHiddenForm(
+            data
+          );
+
+
+        form =
+          result.form;
+
+        iframe =
+          result.iframe;
+
+
+        /*
+         * QUAN TRỌNG:
+         *
+         * Khi Google Apps Script xử lý
+         * POST xong và trả HTML về iframe,
+         * iframe sẽ phát sinh sự kiện load.
+         *
+         * Không cần postMessage nữa.
+         */
+
+        iframe.onload =
+          function() {
+
+            console.log(
+              "MỘC TRÀ: iframe đã nhận response."
+            );
+
+
+            /*
+             * Chờ một chút để đảm bảo
+             * request phía Google đã hoàn tất.
+             */
+
+            setTimeout(
+              function() {
+
+                success();
+
+              },
+              500
+            );
+
+          };
+
+
+        console.log(
+          "MỘC TRÀ - SUBMIT ORDER:",
+          data
+        );
+
+
+        /*
+         * Timeout 20 giây
+         */
+
+        timeout =
+          setTimeout(
+            function() {
+
+              failure(
+                "Máy chủ phản hồi quá lâu. Vui lòng kiểm tra lại Google Sheet."
+              );
+
+            },
+            20000
+          );
+
+
+        /*
+         * GỬI FORM
+         */
+
         form.submit();
+
 
       } catch (error) {
 
-        finishError(error);
+        failure(
+          error &&
+          error.message
+            ? error.message
+            : "Không thể gửi đơn hàng."
+        );
 
       }
 
@@ -717,7 +817,7 @@ function sendOrderToGoogleSheet(data) {
 
 
 /* =================================================
-   HIỆN THÀNH CÔNG
+   SHOW SUCCESS
 ================================================= */
 
 function showOrderSuccess(result) {
@@ -729,9 +829,7 @@ function showOrderSuccess(result) {
 
 
   /*
-   * Nếu HTML hiện tại có hàm
-   * showOrderSuccess riêng thì ưu tiên
-   * gọi nó.
+   * Nếu source HTML có UI success riêng
    */
 
   if (
@@ -739,7 +837,9 @@ function showOrderSuccess(result) {
     "function"
   ) {
 
-    window.showOrderSuccessUI(result);
+    window.showOrderSuccessUI(
+      result
+    );
 
     return;
 
@@ -750,37 +850,79 @@ function showOrderSuccess(result) {
     $("success");
 
 
-  if (success) {
+  if (!success) {
 
-    success.style.display =
-      "block";
+    alert(
+      "Đặt hàng thành công!"
+    );
 
+    return;
+
+  }
+
+
+  success.style.display =
+    "block";
+
+
+  /*
+   * Mã đơn
+   */
+
+  const orderCodeElements =
+    success.querySelectorAll(
+      "[data-order-code]"
+    );
+
+
+  orderCodeElements.forEach(
+    function(el) {
+
+      el.textContent =
+        result.orderCode || "";
+
+    }
+  );
+
+
+  /*
+   * Message
+   */
+
+  const messageElements =
+    success.querySelectorAll(
+      "[data-order-message]"
+    );
+
+
+  messageElements.forEach(
+    function(el) {
+
+      el.textContent =
+        result.message ||
+        "Đặt hàng thành công.";
+
+    }
+  );
+
+
+  /*
+   * Scroll
+   */
+
+  try {
 
     success.scrollIntoView({
+
       behavior: "smooth",
+
       block: "start"
+
     });
 
+  } catch (error) {
 
-    /*
-     * Nếu trong success có element
-     * hiển thị mã đơn.
-     */
-
-    const orderCodeElements =
-      success.querySelectorAll(
-        "[data-order-code]"
-      );
-
-
-    orderCodeElements.forEach(
-      function(el) {
-
-        el.textContent =
-          result.orderCode || "";
-
-      }
-    );
+    success.scrollIntoView();
 
   }
 
@@ -788,7 +930,7 @@ function showOrderSuccess(result) {
 
 
 /* =================================================
-   RESET FORM
+   RESET
 ================================================= */
 
 function resetOrder() {
@@ -804,7 +946,8 @@ function resetOrder() {
   }
 
 
-  orderState.qty = 1;
+  orderState.qty =
+    1;
 
 
   renderOrderSummary();
@@ -813,7 +956,7 @@ function resetOrder() {
 
 
 /* =================================================
-   SETUP FORM
+   SETUP ORDER FORM
 ================================================= */
 
 function setupOrderForm() {
@@ -837,24 +980,17 @@ function setupOrderForm() {
     "submit",
     async function(event) {
 
-      /*
-       * QUAN TRỌNG:
-       * Chặn submit mặc định.
-       */
-
       event.preventDefault();
 
 
-      if (orderState.submitting) {
+      if (
+        orderState.submitting
+      ) {
 
         return;
 
       }
 
-
-      // ==============================
-      // LẤY THÔNG TIN
-      // ==============================
 
       const nameInput =
         $("name");
@@ -884,9 +1020,9 @@ function setupOrderForm() {
           : "";
 
 
-      // ==============================
-      // VALIDATE
-      // ==============================
+      /*
+       * NAME
+       */
 
       if (!name) {
 
@@ -894,16 +1030,22 @@ function setupOrderForm() {
           "Vui lòng nhập họ tên."
         );
 
+
         if (nameInput) {
 
           nameInput.focus();
 
         }
 
+
         return;
 
       }
 
+
+      /*
+       * PHONE
+       */
 
       if (!phone) {
 
@@ -911,11 +1053,13 @@ function setupOrderForm() {
           "Vui lòng nhập số điện thoại."
         );
 
+
         if (phoneInput) {
 
           phoneInput.focus();
 
         }
+
 
         return;
 
@@ -928,16 +1072,22 @@ function setupOrderForm() {
           "Số điện thoại không hợp lệ. Vui lòng kiểm tra lại."
         );
 
+
         if (phoneInput) {
 
           phoneInput.focus();
 
         }
 
+
         return;
 
       }
 
+
+      /*
+       * ADDRESS
+       */
 
       if (!address) {
 
@@ -945,59 +1095,81 @@ function setupOrderForm() {
           "Vui lòng nhập địa chỉ nhận hàng."
         );
 
+
         if (addressInput) {
 
           addressInput.focus();
 
         }
 
+
         return;
 
       }
 
 
-      // ==============================
-      // ORDER DATA
-      // ==============================
+      /*
+       * PRODUCT
+       */
 
       const weight =
         orderState.selected.weight;
 
 
       const quantity =
-        Number(orderState.qty);
+        Number(
+          orderState.qty
+        );
 
 
       const unitPrice =
-        Number(orderState.selected.price);
+        Number(
+          orderState.selected.price
+        );
 
 
       const total =
-        unitPrice * quantity;
+        unitPrice *
+        quantity;
 
+
+      /*
+       * UTM
+       */
 
       const marketing =
         getMarketingData();
 
 
+      /*
+       * ORDER DATA
+       */
+
       const order = {
 
-        name: name,
+        name:
+          name,
 
-        phone: phone,
+        phone:
+          phone,
 
-        address: address,
+        address:
+          address,
 
         product:
           "Chè Shan Tuyết cổ thụ",
 
-        weight: weight,
+        weight:
+          weight,
 
-        quantity: quantity,
+        quantity:
+          quantity,
 
-        unitPrice: unitPrice,
+        unitPrice:
+          unitPrice,
 
-        total: total,
+        total:
+          total,
 
         source:
           marketing.source,
@@ -1023,15 +1195,17 @@ function setupOrderForm() {
       );
 
 
-      // ==============================
-      // LOCK SUBMIT
-      // ==============================
+      /*
+       * START LOADING
+       */
 
       orderState.submitting =
         true;
 
 
-      setSubmitLoading(true);
+      setSubmitLoading(
+        true
+      );
 
 
       try {
@@ -1043,21 +1217,22 @@ function setupOrderForm() {
 
 
         console.log(
-          "MỘC TRÀ - ORDER SUCCESS:",
+          "MỘC TRÀ - SUCCESS:",
           result
         );
 
 
         /*
-         * Thành công thật sự:
-         * Apps Script đã appendRow().
+         * HIỆN THÀNH CÔNG
          */
 
-        showOrderSuccess(result);
+        showOrderSuccess(
+          result
+        );
 
 
         /*
-         * Reset sau khi thành công.
+         * RESET
          */
 
         resetOrder();
@@ -1072,7 +1247,8 @@ function setupOrderForm() {
 
 
         alert(
-          error && error.message
+          error &&
+          error.message
             ? error.message
             : "Không thể gửi đơn hàng. Vui lòng thử lại."
         );
@@ -1083,7 +1259,10 @@ function setupOrderForm() {
         orderState.submitting =
           false;
 
-        setSubmitLoading(false);
+
+        setSubmitLoading(
+          false
+        );
 
       }
 
