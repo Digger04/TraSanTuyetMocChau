@@ -2281,6 +2281,10 @@ textarea{
 
 }
 
+
+
+/* POPUP SOCIAL PROOF */
+.social-popup{position:fixed;left:50%;bottom:82px;z-index:120;width:min(390px,calc(100% - 24px));padding:11px 12px;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.97);border:1px solid #e7e1d4;border-radius:15px;box-shadow:0 12px 35px rgba(0,0,0,.16);transform:translate(-50%,18px) scale(.96);opacity:0;pointer-events:none;transition:.35s ease}.social-popup.show{transform:translate(-50%,0) scale(1);opacity:1}.popup-icon{flex:none;width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:linear-gradient(135deg,#edf7ef,#fff4d7);font-size:20px}.popup-content{min-width:0;flex:1}.popup-content b{display:block;color:var(--green);font-size:11px;line-height:1.35}.popup-content span{display:block;margin-top:2px;color:var(--muted);font-size:9px;line-height:1.4}.popup-close{width:22px;height:22px;border:0;background:transparent;color:#999;font-size:17px;cursor:pointer}.popup-progress{position:absolute;left:0;bottom:0;width:100%;height:2px;overflow:hidden;border-radius:0 0 15px 15px}.popup-progress i{display:block;width:100%;height:100%;background:var(--gold);transform-origin:left;animation:popupTimer 4.5s linear forwards}@keyframes popupTimer{from{transform:scaleX(1)}to{transform:scaleX(0)}}
 </style>
 
 </head>
@@ -4776,6 +4780,80 @@ showSticky();
 
 <script src="order.js"></script>
 
+<!-- POPUP -->
+<div class="social-popup" id="socialPopup" aria-live="polite">
+  <div class="popup-icon" id="popupIcon">🌿</div>
+  <div class="popup-content"><b id="popupTitle">Nhiều khách đang xem MỘC TRÀ</b><span id="popupText">Shan Tuyết cổ thụ đang được quan tâm.</span></div>
+  <button class="popup-close" id="popupClose" type="button" aria-label="Đóng">×</button>
+  <div class="popup-progress"><i></i></div>
+</div>
+
+
+<script>
+/* POPUP SOCIAL PROOF */
+const popup=document.getElementById("socialPopup"),popupIcon=document.getElementById("popupIcon"),popupTitle=document.getElementById("popupTitle"),popupText=document.getElementById("popupText"),popupClose=document.getElementById("popupClose");
+const popupNames=[
+  "Nguyễn Văn Minh","Trần Thị Hương","Lê Văn Nam","Phạm Thị Lan","Hoàng Văn Tuấn",
+  "Đỗ Thị Mai","Bùi Văn Thành","Vũ Thị Ngọc","Đặng Văn Hùng","Phan Thị Hoa",
+  "Nguyễn Thị Linh","Trần Văn Dũng"
+];
+const popupProducts=[
+  "0,5 Kg Chè San Tuyết","1 Kg Chè San Tuyết","2 Kg Chè San Tuyết"
+];
+const popupActions=[
+  "đang đặt hàng",
+  "đang xem sản phẩm"
+];
+let popupTimer=null;
+let popupLastKey="";
+function popupRandom(arr){
+  return arr[Math.floor(Math.random()*arr.length)];
+}
+function popupMinutes(){
+  return Math.floor(Math.random()*9)+1; // 1–9 phút
+}
+function getPopupMessage(){
+  let name=popupRandom(popupNames);
+  let product=popupRandom(popupProducts);
+  let action=popupRandom(popupActions);
+  let minutes=popupMinutes();
+  let key=name+"|"+product+"|"+action;
+  let guard=0;
+  while(key===popupLastKey && guard<8){
+    name=popupRandom(popupNames);
+    product=popupRandom(popupProducts);
+    action=popupRandom(popupActions);
+    minutes=popupMinutes();
+    key=name+"|"+product+"|"+action;
+    guard++;
+  }
+  popupLastKey=key;
+
+  if(action==="đang đặt hàng"){
+    return ["🛒",`${name} đang đặt hàng`,`${product} • khoảng ${minutes} phút trước`];
+  }
+  return ["🌿",`${name} đang xem sản phẩm`,`${product} • khoảng ${minutes} phút trước`];
+}
+function showPopup(){
+  if(successMode)return;
+  const m=getPopupMessage();
+  popupIcon.textContent=m[0];
+  popupTitle.textContent=m[1];
+  popupText.textContent=m[2];
+  popup.classList.remove("show");
+  void popup.offsetWidth;
+  const bar=popup.querySelector(".popup-progress i");
+  bar.style.animation="none";
+  void bar.offsetWidth;
+  bar.style.animation="popupTimer 4.5s linear forwards";
+  popup.classList.add("show");
+  clearTimeout(popupTimer);
+  popupTimer=setTimeout(()=>popup.classList.remove("show"),4500);
+}
+popupClose.addEventListener("click",()=>{popup.classList.remove("show");clearTimeout(popupTimer)});
+setTimeout(showPopup,4500);
+setInterval(showPopup,10500);
+</script>
 </body>
 
 </html>
